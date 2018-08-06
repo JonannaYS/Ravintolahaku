@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ravintolahaku</title>
+    <link rel="stylesheet" type="text/css" href="tyyli/ulkoasu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Monofett' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nothing You Could Do' rel='stylesheet'>
+    <!--<script src="ravintolat.js"></script>-->
+</head>
+<body>
+<h2 onclick="piilotaeka()">Hae kaikki ravintolat</h2>
+<button style="display: none" id="eka" onclick="haeKaikki()">Hae kaikki</button>
+<h2 onclick="piilotatoka()">Hae kaupunginosalla</h2>
+<form id="toka" style="display: none">
+    Kaupunginosa: <input id="kaupunginosa" type="text"/><br>
+    <input value="Hae" type="button" id="btn" onclick="haeNimella(document.getElementById('kaupunginosa').value);">
+</form>
+
+<h2 onclick="piilotakolmas()">Hae ravintolan tyylillä</h2>
+<form id="kolmas" style="display: none">
+    Cuisine: <input id="cuisine" type="text"/><br>
+    <input value="Hae" type="button" id="btn1" onclick="haeTyylilla(document.getElementById('cuisine').value);">
+</form>
+
+
+
+<div id="tulos"></div>
+<script src="routes/ravintolaservice.js"></script>
+<script>
+    function piilotatoka() {
+        var x = document.getElementById("toka");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+    function piilotaeka() {
+        var x = document.getElementById("eka");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+    function piilotakolmas() {
+        var x = document.getElementById("kolmas");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+    function piilotaneljas() {
+        var x = document.getElementById("neljas");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+    function piilotaviides() {
+        var x = document.getElementById("viides");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+</body>
+
+</html>
